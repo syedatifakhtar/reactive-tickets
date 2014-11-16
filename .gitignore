@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 logs
 project/project
 project/target
@@ -16,6 +17,8 @@ dist
 /project/*-shim.sbt
 /activator-sbt-*-shim.sbt
 
+=======
+>>>>>>> 13f8b1e2bfc27694baa9a8f8d6c1de07a0b168e8
 # Ignore Play! working directory #
 bin/
 /db
@@ -33,6 +36,7 @@ server.pid
 *.eml
 /dist/
 .cache
+<<<<<<< HEAD
 
 #Ignore Angular
 node_modules
@@ -41,3 +45,5 @@ dist
 .sass-cache
 bower_components
 
+=======
+>>>>>>> 13f8b1e2bfc27694baa9a8f8d6c1de07a0b168e8
