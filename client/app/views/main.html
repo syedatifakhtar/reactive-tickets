@@ -1,0 +1,29 @@
+<div>
+<h2>Movies Playing</h2>
+	<div style="width:100%;height:auto;display:inline-block;margin-bottom:8%;">
+		<!-- Single button -->
+		<div class="btn-group" dropdown is-open="status.isopen" style="float:right">
+		  <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+			{{selectedRegion}} <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+			<li ng-repeat="choice in regions">
+			  <a ng-click="setRegion(choice)">{{choice}}</a>
+			</li>
+		  </ul>
+		</div>
+	</div>
+	<div>
+	<div class="container-fluid">
+	<div class="row">
+		<div ng-repeat="movie in movies track by $index" class="col-lg-3 col-md-3 col-sm-4 col-xs-6" style="height:320px">
+					<a href="#" class="">
+						<img ng-src="http://cnt.in.bookmyshow.com/Events/Large/{{movie.movieHeader.id}}.jpg" class="img-responsive">
+						<h5>{{movie.movieHeader.name}}</h5>
+						<h6>IMDB Rating: {{movie.movieDetails.imdbRating}}</h6>
+					</a>
+		</div>
+	</div>
+	</div>
+  </div>
+</div>
