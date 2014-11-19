@@ -31,10 +31,9 @@
         <h3 class="text-muted">Book Our Show</h3>
       </div>
 
-      <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+      <div ng-view></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the ACP Team</p>
       </div>
     </div>
 
@@ -62,12 +61,14 @@
     <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+		        <script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/showmovie.js"></script>
         <!-- endbuild -->
 </body>
 </html>

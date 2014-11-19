@@ -1,0 +1,24 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<img ng-src="{{movie.Poster}}" class="img-responsive"/>
+		</div>
+		<div class="col-md-8">
+			<h1>{{movie.Title}}</h1>
+			<h4>{{movie.Genre}}</h4>
+			<h5>Director: {{movie.Director}} </h5>
+			<h5>Actors:{{movie.Actors}}</h5>
+			<p>{{movie.Plot}}</p>
+		</div>
+	</div>
+	<div ng-repeat="tweet in tweets.statuses">
+			<div class="row">
+				<div class="col-md-4">
+					{{tweet.user.name}}
+				</div>
+				<div class="col-md-8">
+					User: {{tweet.text}}
+				</div>
+			</div>
+	</div>
+</div>

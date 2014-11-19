@@ -8,5 +8,19 @@
  *
  * Main module of the application.
  */
-angular
-  .module('clientApp', ['ui.bootstrap']);
+var clientApp = angular
+  .module('clientApp', ['ui.bootstrap','ngRoute']);
+function movieRouteConfig($routeProvider) {
+	$routeProvider.when('/', {
+		templateUrl: 'views/main.html',
+				controller:'MainCtrl'
+		}).
+		when('/movie/:id', {
+				templateUrl: 'views/showMovieDetail.html',
+		controller:'ShowMovieDetailCtrl'
+		}).
+		otherwise({
+		redirectTo: '/'
+		});
+}
+clientApp.config(movieRouteConfig);

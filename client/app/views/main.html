@@ -17,10 +17,11 @@
 	<div class="container-fluid">
 	<div class="row">
 		<div ng-repeat="movie in movies track by $index" class="col-lg-3 col-md-3 col-sm-4 col-xs-6" style="height:320px">
-					<a href="#" class="">
+					<a href="#movie/{{movie.movieDetails.Title}}" class="">
 						<img ng-src="http://cnt.in.bookmyshow.com/Events/Large/{{movie.movieHeader.id}}.jpg" class="img-responsive">
 						<h5>{{movie.movieHeader.name}}</h5>
 						<h6>IMDB Rating: {{movie.movieDetails.imdbRating}}</h6>
+						<h6>Genre {{movie.movieDetails.Genre}}</h6>
 					</a>
 		</div>
 	</div>

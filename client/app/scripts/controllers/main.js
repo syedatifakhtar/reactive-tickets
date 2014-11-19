@@ -13,9 +13,10 @@ angular.module('clientApp')
 	$scope.regions = [
     'NCR',
     'BANG',
-    'CHEN'
+    'CHEN',
+	'PUNE'
 	];
-	$scope.selectedRegion='NCR';
+	$scope.selectedRegion='BANG';
 	
 
   $scope.status = {

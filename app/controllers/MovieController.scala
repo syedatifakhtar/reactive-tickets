@@ -30,7 +30,12 @@ object MovieController extends Controller {
   case class MovieDetails(Title: String //      ,year: String
   //      ,rated: String
   //      ,released: String
-  , Runtime: String, Genre: String, Director: String, Writer: String, Actors: String, Plot: String //      ,language: String
+  , Runtime: String 
+  ,Genre: String
+  , Director: String
+  , Writer: String
+  , Actors: String
+  , Plot: String //      ,language: String
   //      ,country: String
   //      ,awards: String
   , Poster: String //      ,metascore: String
@@ -98,9 +103,9 @@ object MovieController extends Controller {
     java.net.URLEncoder.encode(trimmed, "UTF-8")
   }
 
-  def getTweets(query: String) = {
+  def getTweets(query: String) = Action.async{
     WS.url("http://twitter-search-proxy.herokuapp.com/search/tweets?q=" + query).get().flatMap {
-      response => Future { Ok(response.body) }
+      response => Future { Ok(response.body).withHeaders(("Access-Control-Allow-Origin" -> "*")) }
     }
   }
 }
